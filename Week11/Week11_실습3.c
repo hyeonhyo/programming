@@ -3,10 +3,10 @@
 
 int main(void) {
     char src[] = "The worst things to eat before you sleep";
-    char dst[100]; 
-    
-    dst = strcpy(dst, src); 
+    char dst[100];
 
-    printf("Copied string: %s", dst);
+    strcpy(dst, src); 
+
+    printf("Copied string: %s\n", dst);
 }
 
