@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <string.h>
+
+int main(void) {
+    char src[] = "The worst things to eat before you sleep";
+    char dst[100]; 
+    
+    dst = strcpy(dst, src); 
+
+    printf("Copied string: %s", dst);
+}
+
