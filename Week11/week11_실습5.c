@@ -4,31 +4,21 @@
 int main() {
 	
 	FILE *fp;
-    char w;  
+    char w[3][100];  
     int i;
-    char c;
+    
 
-  
     for (i = 0; i < 3; i++){
         printf("input a word: "); 
-        scanf("%s", &w);  
+        scanf("%s", &w[i]);  
 	}
 
     fp = fopen("sample.txt", "w");
 
 
-    for (i = 0; i < 3; i++) {
-        fprintf(fp, "%s", w);  
+    for (i = 0; i < 3; i++){
+        fprintf(fp, "%s\n", w[i]);  
     }
-
-    fclose(fp);  
-    
-    fp = fopen("sample.txt", "r");
-   
-    while ((c = fgetc(fp)) != EOF) {
-        putchar(c);  
-    }
-
     fclose(fp);
     return 0;
 }
