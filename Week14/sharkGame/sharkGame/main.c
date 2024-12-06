@@ -222,6 +222,7 @@ int main(int argc, const char * argv[]) {
         //step 2-4. coin
         int getcoin = board_getBoardCoin(pos);//이동한 위치에서 호출 
         player_coin[turn] += getcoin; // coin 습득 
+        
 		//coin이 존재하는 경우 coin 습득 정보를 출력 
 		if (getcoin>0)
 		printf("%s : + %d coin", player_name[turn], getcoin);

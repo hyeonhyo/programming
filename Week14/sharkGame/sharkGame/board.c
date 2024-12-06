@@ -82,14 +82,10 @@ int board_initBoard(void)
 int board_stepShark(void)
 {
 	int board_step = rand() % MAX_SHARKSTEP +1;
-	int i; 
+
 	//1~MAX_SHARKSTEP 칸 랜덤 이동 
 	
-	for (i =SHARK_INITPOS+1; i<= shark_position + board_step;i++)
-	{
-		if (i>=0 && i<N_BOARD)
-		board_status[i] = BOARDSTATUS_NOK;
-	}// 이동 경로 칸=BOARDSTATUS_NOK 
+	//이동하는 경로에서 board_status 배열 요소 변경 12/6
 	
 	shark_position += board_step; //값 갱신 
 	
